@@ -1,16 +1,26 @@
 import sys
-from PyQt5 import QtGui
+import os
+import pandas as pd
 
-def window():
-   app = QtGui.QApplication(sys.argv)
-   w = QtGui.QWidget()
-   b = QtGui.QLabel(w)
-   b.setText("Hello World!")
-   w.setGeometry(100,100,200,50)
-   b.move(50,20)
-   w.setWindowTitle()
-   w.show()
-   sys.exit(app.exec_())
+import numpy as np
+import matplotlib.pyplot as plt
 
-if __name__ == '__main__':
-   window()
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+
+import glob
+from PIL import Image
+
+import sys
+from PyQt5 import QtWidgets, QtGui
+
+def basicWindow():
+    app = QtWidgets.QApplication(sys.argv)
+    windowExample = QtWidgets.QWidget()
+    windowExample.setWindowTitle('Basic Window Example')
+    windowExample.setWindowIcon(QtGui.QIcon("python.jpg"))
+    windowExample.show()
+    sys.exit(app.exec_())
+
+basicWindow()
